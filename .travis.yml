@@ -2,3 +2,7 @@ language: scala
 jdk: oraclejdk8
 
 script: sbt compile
+
+deploy:
+  provider: script
+  script: ";sbt publish;sbt bintrayRelease"

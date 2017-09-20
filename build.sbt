@@ -13,6 +13,8 @@ inThisBuild(Seq(
     Resolver.url("artifactory-ivy", url("http://lolhens.no-ip.org/artifactory/ivy-public/"))(Resolver.ivyStylePatterns)
   ),
 
+  bintrayReleaseOnPublish := false,
+
   scalacOptions ++= Seq("-Xmax-classfile-name", "127")
 ))
 
