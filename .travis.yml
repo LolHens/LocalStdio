@@ -5,4 +5,6 @@ script: sbt compile
 
 deploy:
   provider: script
-  script: ";sbt publish;sbt bintrayRelease"
+  script: sbt ";publish;bintrayRelease"
+  on:
+    tags: true
