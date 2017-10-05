@@ -1,4 +1,4 @@
-package org.lolhens.localstdio
+package de.lolhens.localstdio
 
 import java.io.{InputStream, OutputStream, PrintStream}
 

@@ -1,22 +1,14 @@
-name := (name in ThisBuild).value
-
 inThisBuild(Seq(
   name := "localStdio",
-  organization := "org.lolhens",
+  organization := "de.lolhens",
   version := "0.0.1",
 
   scalaVersion := "2.12.3",
 
-  externalResolvers := Seq(
-    Resolver.defaultLocal,
-    "artifactory-maven" at "http://lolhens.no-ip.org/artifactory/maven-public/",
-    Resolver.url("artifactory-ivy", url("http://lolhens.no-ip.org/artifactory/ivy-public/"))(Resolver.ivyStylePatterns)
-  ),
-
-  bintrayReleaseOnPublish := false,
-
-  scalacOptions ++= Seq("-Xmax-classfile-name", "127")
+  bintrayReleaseOnPublish := false
 ))
+
+name := (name in ThisBuild).value
 
 lazy val root = project.in(file("."))
   .settings(publishArtifact := false)
