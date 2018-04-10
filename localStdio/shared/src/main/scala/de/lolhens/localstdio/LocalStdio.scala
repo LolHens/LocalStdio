@@ -74,12 +74,12 @@ object LocalStdio {
     redirectOut(out)
     redirectErr(err)
 
-    val result = f
-
-    redirectIn(None)
-    redirectOut(None)
-    redirectErr(None)
-
-    result
+    try {
+      f
+    } finally {
+      redirectIn(None)
+      redirectOut(None)
+      redirectErr(None)
+    }
   }
 }
